@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Frontend Mentor | Mortgage repayment calculator</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="input-container">
+        <header>
+          <h4>Mortgage Calculator</h4>
+          <small  id="clear">Clear All</small>
+        </header>
+        <label for="mortgage-amount">Mortgage Amount</label>
+        <div class="long-div">
+          <span class="pound-sign" id="signs">&pound;</span
+          ><input type="text" id="amount-id" />
+        </div>
+        <span class="error"></span>
+        <div class="term-div">
+          <div class="centered-div">
+            <label for="Mortgage-term">Mortgage Term</label>
+            <div class="short-div">
+              <input type="text" id="term-id" />
+              <small class="years-div" id="signs">years</small>
+            </div>
+            <span class="error"></span>
+          </div>
+          <div class="centered-div">
+            <label for="Interest-rate">Interest Rate</label>
+
+            <div class="short-div">
+              <input type="text" id="interest-id" />
+              <small class="interest-div" id="signs">%</small>
+            </div>
+            <span class="error"></span>
+          </div>
+        </div>
+
+        <label for="mortgage-type">Mortgage Type</label>
+        <div class="long-div type-div">
+          <input type="radio" name="mortgage" id="repayment-id" /><span
+            >Repayment</span
+          >
+        </div>
+        <div class="long-div type-div">
+          <input type="radio" name="mortgage" id="interest" /><span>
+            Interest Only</span
+          >
+        </div>
+        <span class="error"></span>
+
+        <button class="button" id="btn-submit">
+          <img
+            src="./assets/images/icon-calculator.svg"
+            alt="calculator"
+          />Calculate Repayments
+        </button>
+      </div>
+      <div class="output-container">
+        <div class="result-container">
+          <header>
+            <h4>Your results</h4>
+          </header>
+          <p>
+            Your results are shown below based on the information you provided.
+            To adjust the results edit the form and click "calculate repayments"
+            again.
+          </p>
+          <div class="repay-class">
+            <small>Your monthly repayments</small>
+            <h2 class="result">&pound;1,727.94</h2>
+            <div class="total-class">
+              <small>Total you'll repay over the term</small>
+              <h3 class="total-payment"></h3>
+            </div>
+          </div>
+        </div>
+        <div class="inner-output">
+          <div class="img-container">
+            <img src="./assets/images/illustration-empty.svg" alt="" />
+            <span>Results shown here</span>
+          </div>
+          <p>
+            Complete the form and click "calculate repayments" to see what your
+            monthly repayment would be.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Master-Francis</a>.
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
