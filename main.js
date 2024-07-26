@@ -37,9 +37,6 @@ const getValue = (el) => Number(el.value.replace(/\s+/g, ""));
 
 const myMoney = () => {
   money = getValue(elements.amount);
-  if(money === isNaN){
-    money = money.replace(/[^0-9]/g, '')
-  }
   isValid = updateValidity(money, elements.longDiv[0], 0);
 };
 const interestRate = () => {
@@ -58,13 +55,12 @@ const calculate = () => {
   const num = Math.pow(1 + interestPay, year);
   let isColor = false;
 
-  
-
   if (!elements.repayment.checked && !elements.interest.checked) {
     isValid = false;
     elements.err[3].textContent = "This field is required";
     return;
   }
+ 
 
   elements.err[3].textContent = "";
   const mortgageRepayment = (money * interestPay * num) / (num - 1);
@@ -95,7 +91,6 @@ const calculate = () => {
 
   elements.innerOutput.style.display = "none";
   elements.resultContainer.style.display = "block";
-  
 
   interestYears();
   myMoney();
@@ -105,7 +100,7 @@ const calculate = () => {
 const clearAll = () => {
   let clearBtn = document.querySelectorAll("input");
   clearBtn.forEach((input) => {
-    if (input.type == "text") {
+    if (input.type == "number") {
       input.value = "";
     } else if (input.type == "radio") {
       input.checked = false;

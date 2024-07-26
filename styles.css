@@ -64,7 +64,7 @@ header small {
 .short-div:hover {
   border: 1px solid hsl(61, 70%, 52%);
 }
-.input-container input[type="text"]:focus {
+.input-container input[type="number"]:focus {
   outline: none;
 }
 .long-div {
@@ -76,7 +76,7 @@ header small {
   border-radius: 4px;
   margin-top: 8px;
 }
-.long-div input[type="text"] {
+.long-div input[type="number"] {
   margin-left: 10px;
   height: 100%;
   width: 100%;
