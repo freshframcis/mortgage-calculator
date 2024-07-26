@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [tip-calculator live site]()
-- Solution URL: [tip-calculator solution url]()
+- Live Site URL: [tip-calculator live site](https://66a2f5b61bacb9ef31816d92--ephemeral-griffin-d9d13f.netlify.app/)
+- Solution URL: [tip-calculator solution url](https://github.com/freshframcis/mortgage-calculator)
 
 ### Built with
 
